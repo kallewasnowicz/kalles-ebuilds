@@ -25,7 +25,7 @@ IUSE="X"
 if [[ ${PV} == 9999 ]]; then
 	COMMON_DEPEND="~gui-libs/wlroots-9999:=[libinput,session,X?]"
 else
-    COMMON_DEPEND="~gui-libs/wlroots-9999:=[libinput,session,X?]"
+	COMMON_DEPEND="~gui-libs/wlroots-9999:=[libinput,session,X?]"
 fi
 
 COMMON_DEPEND+="
@@ -67,7 +67,4 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" PREFIX="${EPREFIX}/usr" install
-	#dodoc CHANGELOG.md README.md
-
-	#save_config config.h
 }
