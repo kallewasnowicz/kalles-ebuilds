@@ -1,10 +1,9 @@
-name: Ebuild Testing
+name: Kalles-Sources Ebuild Testing
 
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    paths:
+      - sys-kernel/kalles-sources/**
 
 jobs:
   build:
@@ -15,5 +14,3 @@ jobs:
     - uses: actions/checkout@v4
     - name: Kalles-Sources
       run:  sudo ebuild sys-kernel/kalles-sources/kalles-sources-*.ebuild clean test install
-    - name: Kalles-dwl
-      run:  sudo ebuild gui-wm/dwl/dwl-*.ebuild clean test install
