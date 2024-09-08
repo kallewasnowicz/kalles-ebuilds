@@ -1,1 +1,17 @@
+name: Ebuild Testing
 
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: [self-hosted, linux]
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Kalles-Sources
+      run:  ebuild sys-kernel/kalles-sources/kalles-sources-6.10.8.ebuild clean test install
