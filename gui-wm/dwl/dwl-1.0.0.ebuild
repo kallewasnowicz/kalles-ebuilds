@@ -6,11 +6,11 @@ EAPI=8
 inherit savedconfig toolchain-funcs
 
 if [[ ${PV} == 9999 ]]; then
-	EGIT_REPO_URI="https://github.com/kallewasnowicz/kalles-ebuilds.git"
+	EGIT_REPO_URI="https://github.com/kallewasnowicz/kalles-dwl.git"
 	inherit git-r3
 else
 	MY_PV="${PV/_rc/-rc}"
-	SRC_URI="https://github.com/kallewasnowicz/kalles-ebuilds/archive/refs/tags/v${MY_PV}.tar.gz"
+	SRC_URI="https://github.com/kallewasnowicz/kalles-dwl/archive/refs/tags/v${MY_PV}.tar.gz"
 	S="${WORKDIR}/dwl-${MY_PV}"
 	KEYWORDS="~amd64 ~arm64 ~ppc64 ~x86"
 fi
