@@ -1,0 +1,16 @@
+name: DWL Ebuild Testing
+
+on:
+  push:
+    paths:
+      - gui-wm/dwl/**
+
+jobs:
+  build:
+
+    runs-on: [self-hosted, linux]
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Kalles-dwl
+      run:  sudo ebuild gui-wm/dwl/dwl-*.ebuild clean test install
