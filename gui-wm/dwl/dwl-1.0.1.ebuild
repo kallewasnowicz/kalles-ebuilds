@@ -11,7 +11,7 @@ if [[ ${PV} == 9999 ]]; then
 else
 	MY_PV="${PV/_rc/-rc}"
 	SRC_URI="https://github.com/kallewasnowicz/kalles-dwl/archive/refs/tags/v${MY_PV}.tar.gz"
-	S="${WORKDIR}/dwl-${MY_PV}"
+	S="${WORKDIR}/kalles-dwl-${MY_PV}"
 	KEYWORDS="~amd64 ~arm64 ~ppc64 ~x86"
 fi
 
