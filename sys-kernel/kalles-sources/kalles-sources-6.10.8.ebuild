@@ -13,14 +13,13 @@ CKV="$(ver_cut 1-3)"
 inherit kernel-2 optfeature
 detect_version
 
-# disable all patch from kernel-2
 UNIPATCH_LIST_DEFAULT=""
 
 DESCRIPTION="Kalles Custom Kernel"
 HOMEPAGE="https://github.com/kallewasnowicz/kalles-ebuilds"
 SRC_URI="
-	${KERNEL_URI}
-	${GENPATCHES_URI}
+    ${KERNEL_URI}
+    ${GENPATCHES_URI}
     https://raw.githubusercontent.com/CachyOS/kernel-patches/master/6.10/0001-amd-pstate.patch -> 0001-amd-pstate.patch
     https://raw.githubusercontent.com/CachyOS/kernel-patches/master/6.10/0002-bbr3.patch -> 0002-bbr3.patch
     https://raw.githubusercontent.com/CachyOS/kernel-patches/master/6.10/0003-block.patch -> 0003-block.patch
