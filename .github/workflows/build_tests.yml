@@ -14,4 +14,6 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Kalles-Sources
-      run:  sudo ebuild sys-kernel/kalles-sources/kalles-sources-6.10.8.ebuild clean test install
+      run:  sudo ebuild sys-kernel/kalles-sources/kalles-sources-*.ebuild clean test install
+    - name: Kalles-dwl
+      run:  sudo ebuild gui-wm/dwl/dwl-*.ebuild clean test install
