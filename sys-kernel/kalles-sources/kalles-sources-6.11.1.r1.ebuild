@@ -23,6 +23,7 @@ SRC_URI="
     https://github.com/CachyOS/kernel-patches/raw/refs/heads/master/6.11/0001-address-masking.patch -> 0001-address-masking.patch
     https://github.com/CachyOS/kernel-patches/raw/refs/heads/master/6.11/0002-bbr3.patch -> 0002-bbr3.patch
     https://github.com/CachyOS/kernel-patches/raw/refs/heads/master/6.11/0004-fixes.patch -> 0004-fixes.patch
+    https://github.com/CachyOS/kernel-patches/raw/refs/heads/master/6.11/0005-intel-pstate.patch -> 0005-intel-pstate.patch
     https://github.com/CachyOS/kernel-patches/raw/refs/heads/master/6.11/0006-ksm.patch -> 0006-ksm.patch
     https://github.com/CachyOS/kernel-patches/raw/refs/heads/master/6.11/0007-ntsync.patch -> 0007-ntsync.patch
     https://github.com/CachyOS/kernel-patches/raw/refs/heads/master/6.11/0008-perf-per-core.patch -> 0008-perf-per-core.patch
@@ -38,6 +39,7 @@ src_prepare() {
     eapply "${DISTDIR}/0001-address-masking.patch"
     eapply "${DISTDIR}/0002-bbr3.patch"
     eapply "${DISTDIR}/0004-fixes.patch"
+    eapply "${DISTDIR}/0005-intel-pstate.patch"
     eapply "${DISTDIR}/0006-ksm.patch"
     eapply "${DISTDIR}/0007-ntsync.patch"
     eapply "${DISTDIR}/0008-perf-per-core.patch"
