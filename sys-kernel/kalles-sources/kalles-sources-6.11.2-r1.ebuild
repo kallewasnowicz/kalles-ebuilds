@@ -45,7 +45,7 @@ src_prepare() {
     eapply "${DISTDIR}/0007-ntsync.patch"
     eapply "${DISTDIR}/0008-perf-per-core.patch"
     eapply "${DISTDIR}/0010-zstd.patch"
-    eapply "${DISTDIR}/0099-Cachy-Allow-O3.patch
+    eapply "${DISTDIR}/0099-Cachy-Allow-O3.patch"
 
     eapply_user
 }
