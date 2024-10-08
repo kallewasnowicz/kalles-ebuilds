@@ -28,7 +28,7 @@ SRC_URI="
     https://github.com/CachyOS/kernel-patches/raw/refs/heads/master/6.11/0007-ntsync.patch -> 0007-ntsync.patch
     https://github.com/CachyOS/kernel-patches/raw/refs/heads/master/6.11/0008-perf-per-core.patch -> 0008-perf-per-core.patch
     https://github.com/CachyOS/kernel-patches/raw/refs/heads/master/6.11/0010-zstd.patch -> 0010-zstd.patch
-    https://github.com/sirlucjan/kernel-patches/blob/master/6.11/kbuild-cachyos-patches/0001-Cachy-Allow-O3.patch -> 0099-Cachy-Allow-O3.patch
+    https://github.com/sirlucjan/kernel-patches/raw/refs/heads/master/6.11/kbuild-cachyos-patches/0001-Cachy-Allow-O3.patch -> 0001-Cachy-Allow-O3.patch
 "
 
 LICENSE="GPL-3"
@@ -45,7 +45,7 @@ src_prepare() {
     eapply "${DISTDIR}/0007-ntsync.patch"
     eapply "${DISTDIR}/0008-perf-per-core.patch"
     eapply "${DISTDIR}/0010-zstd.patch"
-    eapply "${DISTDIR}/0099-Cachy-Allow-O3.patch"
+    eapply "${DISTDIR}/0001-Cachy-Allow-O3.patch"
 
     eapply_user
 }
